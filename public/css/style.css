@@ -1,0 +1,26 @@
+body{
+    background-image: url("../img/bg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  #centeringDiv{
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
+  #mainForm{
+    margin: auto;
+  }

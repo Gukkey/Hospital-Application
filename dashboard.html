@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+      body{
+          background-image: url("public/img/bg1.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      body::-webkit-scrollbar{
+          display: none;
+      }
+      html, body{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="dashboard.html">
+                  <strong>Hospital Management System</strong>
+                </a>
+            
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+              </div>
+            
+              <div id="navbarBasicExample" class="navbar-menu">
+               
+                <div class="navbar-end">
+                  <div class="navbar-item">
+                    <div class="buttons">
+                      <a href="#" class="button is-light" id="displayUsername"></a>
+                      <a href="appointment.html" class="button is-danger">
+                        <strong>Show All Appointment</strong>
+                      </a>
+                      <a class="button is-primary" onclick="logout()">
+                        <strong>Logout</strong>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </nav>
+
+      <br>
+
+      <nav class="container breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+
+     
+
+      <div class="container">
+        <div class="columns">
+            <div class="column is-half">
+                <div class="card">
+                    <div class="card-content">
+                      <h1 class="is-size-4" style="margin-top: -10px;margin-bottom: 15px;font-weight: 600;color: #13827B;">Create New Appointment</h1>
+                        <form onsubmit="newAppointment()">
+                          <div class="field">
+                            <label class="label">Full Name</label>
+                            <div class="control">
+                              <input class="input" type="text" placeholder="Text input" id="fullname">
+                            </div>
+                          </div>
+                          
+                          
+                          <div class="field is-grouped">
+                            <div class="control is-expanded">
+                              <label class="label">Age</label>
+                                <input class="input" type="number" placeholder="Text input" id="age">
+                            </div>
+                            <div class="control is-expanded">
+                              <label class="label">Cause</label>
+                                <div class="select">
+                                  <select id="cause">
+                                    <option>Select dropdown</option>
+                                    <option>Common Fever</option>
+                                    <option>Cold &amp; Fever</option>
+                                    <option>Head Ache</option>
+                                    <option>Stomach Problem</option>
+                                    <option>Leg Pain</option>
+                                    <option>Hand Pain</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="control">
+                              <label class="label">City</label>
+                                <div class="select">
+                                  <select id="city">
+                                    <option>Select dropdown</option>
+                                    <option>Coimbatore</option>
+                                    <option>Erode</option>
+                                    <option>Salem</option>
+                                    <option>Chennai</option>
+                                    <option>Thirchy</option>
+                                  </select>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="field is-grouped">
+                            <div class="control is-expanded">
+                              <label class="label">Address</label>
+                              <textarea class="textarea" placeholder="Textarea" rows="2" id="address"></textarea>
+                            </div>
+                            <div class="control">
+                              <label class="label">Phone Number</label>
+                                <input class="input" type="text" placeholder="Text input" id="phonenumber">
+                            </div>
+                          </div>
+    
+                         
+                          <div class="field">
+                            <label class="label">Remarks</label>
+                            <div class="control">
+                              <input class="input" type="text" placeholder="Text input" id="remarks">
+                            </div>
+                          </div>
+                          <br>
+                          
+                          <div class="field">
+                            <div class="control">
+                              <label class="checkbox">
+                                <input type="checkbox" required>
+                                I agree to the <a href="#">terms and conditions</a>
+                              </label>
+                            </div>
+                          </div>
+                         <br>
+                          
+                          <div class="field is-grouped">
+                            <div class="control">
+                              <button class="button is-primary" type="submit">Submit</button>
+                            </div>
+                            <div class="control">
+                              <button class="button is-primary is-light" type="reset">Reset</button>
+                            </div>
+                          </div>
+                        </form>
+
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+
+
+
+      <script src="public/js/index.js"></script>
+  </body>
+</html>
